@@ -21,23 +21,41 @@
       href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Refresh to Play.</h1>
+      <h1>Press a key to Start.</h1>
       <p class="intro">
         Rock beats scissors, paper beats rock and scissors beats paper. Unless
         you have a gun.
       </p>
-      <div class="row">
+      <div class="row-flex">
         <div class="col-lg-6 col-md-6">
           <p>Player One</p>
-          <img src="images/Play-Rock,-Paper,-Scissors.jpg" alt="" srcset="" />
+          <img
+            class="player-img"
+            src="images/Play-Rock,-Paper,-Scissors.jpg"
+            alt=""
+            srcset=""
+          />
+
+          <button id="rock" class="btn btn-lg rock" type="submit">Rock</button>
+          <button id="paper" class="btn btn-lg paper" type="submit">
+            Paper
+          </button>
+          <button id="scissors" class="btn btn-lg scissors" type="submit">
+            Scissors
+          </button>
         </div>
         <div class="col-lg-6 col-md-6">
           <p>Player Two</p>
-          <img src="images/Play-Rock,-Paper,-Scissors.jpg" alt="" srcset="" />
+          <img
+            class="game-img"
+            src="images/Play-Rock,-Paper,-Scissors.jpg"
+            alt=""
+            srcset=""
+          />
         </div>
       </div>
     </div>
