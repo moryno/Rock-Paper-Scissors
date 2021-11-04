@@ -7,7 +7,9 @@ $(".btn").on("click", function(){
     playerPattern.push(playerChosenSign);
     let playerShape = "images/" + playerChosenSign + ".jpg";
     $(".player-img").attr("src", playerShape );
-    playSound(playerChosenSign);
+    $("p").hide();
+   
+    
     nextHand();
     checkAnswer(playerPattern.length-1);
 })
@@ -17,23 +19,23 @@ $(".btn").on("click", function(){
 function checkAnswer(currentSign){
     if(playerPattern[currentSign] ==="rock" && gamePattern[currentSign] ==="scissors"){
         $("h1").text("Player one wins!!");
-        
+        playSound("user");
     }
     else if(playerPattern[currentSign] ==="paper" && gamePattern[currentSign] === "rock"){
         $("h1").text("Player one wins!!");
-        
+        playSound("user");
     }
     else if(playerPattern[currentSign] === "scissors" && gamePattern[currentSign] === "paper"){
         $("h1").text("Player one wins!!");
-        
+        playSound("user");
     }
     else if(playerPattern[currentSign] === gamePattern[currentSign]){
         $("h1").text("It's a draw!!");
-        
+        playSound("draw");
     }
     else{
         $("h1").text("Player two wins!!");
-        
+        playSound("game");
     }
 }
 
